@@ -1,0 +1,78 @@
+body {
+
+    background-color:  ;
+    padding: 0;
+}
+
+.container {
+	width: 800px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right:auto;
+	background-color:white ;
+	border: 4px;
+	min-height:700px;
+	}
+
+.container_invoice {
+	margin-left: auto;
+	margin-right : auto;
+	width: 600px;
+	margin-right: auto;
+	align-content: right;
+}
+
+.container_contact {
+	margin-left: auto; 
+	margin-right : auto;
+	width: 600px;
+	bold: 4px;	
+}
+
+.header {
+	width:100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	heigth:200px;
+	align-content: center;
+	  color: green;
+  background-color:;
+  
+}
+.nav{
+	top: 90px;
+	height:35px;
+	width:100%;
+	background-color:lightgrey ;
+	
+	
+}
+
+.footer {	
+	bottom:fixed;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:lightgrey ;
+	heigth:60px;
+	align-content: center;
+	
+}	
+
+.italic {
+	font-style:italic
+	}
+.row_left {
+	width:70px; 
+	display:inline-block;
+	align-content: left
+}
+.row_right {
+	width:100px; 
+	display:inline-block;
+	align-content: right
+}
+
+.pre_line {
+	white-space: pre-line
+}

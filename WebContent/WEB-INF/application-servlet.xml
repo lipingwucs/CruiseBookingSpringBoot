@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    
+     <!-- InternalResourceViewResolver Controller folder -->
+	<context:component-scan base-package="com.mvc.jpa.controllers" />	 
+	 
+	<!-- InternalResourceViewResolver -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>    <!-- verify folder name-->
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
+	<!-- interceptor settings start -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- interceptor path -->
+            <mvc:mapping path="/**" />
+            <bean class="com.mvc.jpa.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!-- interceptor settings end -->
+    
+	 <!-- verify bean name-->	
+	<bean id="cruise" name="cruise" class="com.mvc.jpa.models.Cruise"> </bean>
+	<bean id="passenger" name="passenger" class="com.mvc.jpa.models.Passenger"> </bean>
+	<bean id="booking" name="booking" class="com.mvc.jpa.models.Booking"> </bean>
+	<bean id="payment" name="payment" class="com.mvc.jpa.models.Payment"> </bean>
+	
+</beans>
